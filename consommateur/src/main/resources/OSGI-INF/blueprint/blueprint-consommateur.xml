@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+	<reference id="horlogeService" interface="fr.ccvrp.capgemini33.services.HorlogeService" />
+
+	<bean id="hommePresse" class="fr.ccvrp.capgemini33.impl.HommePresse"
+		init-method="demanderHeure">
+		<property name="horlogeService" ref="horlogeService" />
+	</bean>
+
+</blueprint>
